@@ -7,6 +7,11 @@ import ExpensesFilter from "../ExpensesFilter/ExpensesFilter";
 export default function ExpenseItemList(props) {
   const [filteredYear, setFilteredYear] = useState("");
 
+  const filterYearHandler = (year) => {
+    setFilteredYear(year);
+    console.log(year);
+  };
+
   const expensesList = props.expenses.map((expense) => {
     return (
       <ExpenseItem
@@ -20,7 +25,7 @@ export default function ExpenseItemList(props) {
 
   return (
     <div>
-      <ExpensesFilter />
+      <ExpensesFilter onFilterYear={filterYearHandler} />
       <Card className="expenses">{expensesList}</Card>
     </div>
   );
