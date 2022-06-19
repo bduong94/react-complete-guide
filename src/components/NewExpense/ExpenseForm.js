@@ -27,7 +27,6 @@ const ExpenseForm = (props) => {
     };
 
     props.onSaveExpenseData(expenseData);
-    props.formViewHandler();
 
     setEnteredTitle("");
     setEnteredAmount("");
