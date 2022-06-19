@@ -24,7 +24,10 @@ export default function ExpenseItemList(props) {
 
   return (
     <Card className="expenses">
-      <ExpensesFilter onFilterYear={filterYearHandler} />
+      <ExpensesFilter
+        selected={filteredYear}
+        onFilterYear={filterYearHandler}
+      />
       {expensesList}
     </Card>
   );
